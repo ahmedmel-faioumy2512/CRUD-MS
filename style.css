@@ -1,0 +1,146 @@
+:root{
+    --dark-bg: #222;
+    --light-bg: #ddd;
+    --dark-primary: #111;
+    --light-primary: #eee;
+    --wight-color: #fff;
+    --black-color: #000;
+}
+.darkmode{
+    --dark-bg: #ddd;
+    --light-bg: #222;
+    --dark-primary: #eee;
+    --light-primary: #111;
+    --wight-color: #000;
+    --black-color: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--light-bg);
+    color: var(--black-color);
+    font-family: system-ui;
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.head h2{
+    color: #068484;
+    margin-bottom: 3px;
+}
+.head h2 a{
+    color: #068484;
+    transition: 0.3s;
+}
+.head h2 a:hover{
+    color: var(--dark-primary);
+}
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: var(--light-primary);
+    margin: 4px 0;
+    border-radius: 6px;
+    padding: 4px;
+    color: var(--black-color);
+}
+input:focus{
+    background: var(--wight-color);
+    transform: scale(1.1);
+}
+.price input{
+    width: 20%;
+}
+#total{
+    background: #a00d02;
+    color: #fff;
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+#total::before{
+    content: 'Total: ';
+}
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #005353;
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin: 4px 0;
+}
+button:hover{
+    background: #034141;
+    letter-spacing: 0.5px;
+}
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+}
+.btnSearch button{
+    width: 45%;
+}
+#deleteAll{
+    margin: 20px 0;
+}
+table button:hover{
+    transform: scale(1.1);
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    background-color: #005353;
+    color: #fff;
+    border-radius: 6px;
+}
+@media (max-width: 767px) {
+    table{
+        font-size: 12px;
+    }   
+    th,td{
+        padding: 4px;
+    }
+    table button{
+        font-size: 12px;
+        padding: 4px;
+    }
+}
+@media (max-width: 575px) {
+    table{
+        font-size: 10px;
+    }   
+    th,td{
+        padding: 4px 2px;
+    }
+    table button{
+        font-size: 10px;
+        padding: 4px;
+    }
+    table tr th:nth-child(6),table tbody td:nth-child(6),
+    table tr th:nth-child(4),table tbody td:nth-child(4),
+    table tr th:nth-child(5),table tbody td:nth-child(5){
+        display: none;
+    }
+}
+table button{
+    box-shadow: 0 0 3px #ddd;
+}
+table th{
+    text-transform: uppercase;
+}
+th,td{
+    padding: 5px;
+}
